@@ -1,0 +1,217 @@
+body{
+  /*  background: rgb(66, 133, 244) url('../img/wallpaper-hd.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    font: 13px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#wrapper{
+    padding-top: 120px;
+}
+
+#logo {
+    z-index: 2;
+    bottom: 14px;
+    right: 22px;
+    position: fixed;
+}
+
+#logo span {
+    display: inline-block;
+    vertical-align: bottom;
+    color: #fff;
+    font: 1.3em Arial, sans-serif;
+    line-height: 29px;
+    margin-left: 4px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.word-container{
+    vertical-align: baseline;
+    padding: 0 .5em;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.word{
+    color: #fff;
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    text-shadow: 0 0.025em 0 rgba(0, 0, 0, 0.1);
+    letter-spacing: -.05em;
+    font-size: 9em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.word a {
+    text-decoration: none;
+}
+
+.arrow-up{
+    width: 0;
+    height: 0;
+    margin-bottom: -1px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    left: 48%;
+    position: relative;
+    z-index: 10;
+}
+
+.definition{
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin: auto auto;
+    width: 55%;
+    background: #fff;
+    padding: 1.3em 1.2em 1.8em;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.beam {
+    -webkit-transform: translateX(0.1em);
+    transform: translateX(0.1em);
+    display: inline-block;
+    margin-bottom: -.12em;
+    margin-right: .2em;
+    padding: 0;
+    height: 1em;
+    width: 0.02em;
+    min-width: 1px;
+    background-color: #fff;
+    vertical-align: baseline;
+}
+
+.beam.blink {
+    -webkit-animation: blink 2s step-end infinite;
+    animation: blink 2s step-end infinite;
+}
+
+body.rotate-background {
+    -webkit-animation: change-background 30s step-end infinite;
+    animation: changebackground 30s step-end infinite;
+}
+
+#page-desc {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 20px;
+    left: 22px;
+}
+
+#menu-button {
+    position: fixed;
+    width: 22px;
+    height: 23px;
+    background: url('../img/matrix.png') center center no-repeat;
+    cursor: pointer;
+    padding: 10px;
+    top: 0;
+    right: 0;
+}
+
+.info{
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: .1em;
+    vertical-align: baseline;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; } 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; } 
+}
+
+@-webkit-keyframes change-background {
+    0%{
+        background-color: rgb(66, 133, 244);
+    }
+
+    25% {
+        background: rgb(66, 133, 244) url('../img/wallpaper-hd.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    50% {
+        background-color: rgb(219, 68, 55);
+    }
+
+    75% {
+        background-color: rgb(244, 180, 0);
+    }
+    100% {
+        background-color: rgb(15, 157, 88);
+    }
+}
+
+/* Mobile Friendly */
+
+/* Landscape tablet */
+@media (max-width: 1024px){
+    .definition{
+        width: 65%;
+    }
+}
+
+/* Landscape mobile phone */
+@media (max-width: 480px){
+
+    #wrapper{
+        padding-top: 50px;
+    }
+
+    .word{
+        font-size: 4.5em;
+    }
+
+    .definition{
+        width: 90%;
+    }
+    
+}
+
+/* Landscape mobile phone/tablet */
+@media (min-width: 481px) and (max-width: 560px){
+    .word{
+        font-size: 7em;
+    }
+}
+
+/* Portraite mobile phone */
+@media (max-width: 320px){
+    #page-desc{
+        display: none;
+    }
+
+    .word{
+        font-size: 4em;
+    }
+}
